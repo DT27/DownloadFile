@@ -36,30 +36,9 @@ class DownloadFile_Plugin implements Typecho_Plugin_Interface
     public static function deactivate(){
         Helper::removeRoute('download.file');
     }
-    
-    /**
-     * 获取插件配置面板
-     * 
-     * @access public
-     * @param Typecho_Widget_Helper_Form $form 配置面板
-     * @return void
-     */
-    public static function config(Typecho_Widget_Helper_Form $form)
-    {
-        /** 分类名称 */
-        $name = new Typecho_Widget_Helper_Form_Element_Text('word', NULL, 'Hello World', _t('说点什么'));
-        $form->addInput($name);
-    }
-    
-    /**
-     * 个人用户的配置面板
-     * 
-     * @access public
-     * @param Typecho_Widget_Helper_Form $form
-     * @return void
-     */
-    public static function personalConfig(Typecho_Widget_Helper_Form $form){}
 
+    public static function config(Typecho_Widget_Helper_Form $form){}
+    public static function personalConfig(Typecho_Widget_Helper_Form $form){}
 
     public static function bottomJS()
     {

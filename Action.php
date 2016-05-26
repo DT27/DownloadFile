@@ -21,10 +21,14 @@ class DownloadFile_Action extends Typecho_Widget
     public function __construct($request, $response, $params = NULL)
     {
         parent::__construct($request, $response, $params);
-
-
     }
 
+    /**
+     * 下载文件
+     *
+     * @cid 文件ID
+     * @throws Typecho_Db_Exception
+     */
     public function downloadFile(){
 
         //throw new Typecho_Widget_Exception(_t('文件不存在'), 404);
